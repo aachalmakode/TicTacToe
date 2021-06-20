@@ -255,6 +255,25 @@ public class TicTacToeGame {
         else if(board[3]==playerChoice && board[7]==playerChoice && board[5]==' ') {
             board[5]=computerChoice;
         }
+
+        else if((board[1]==' ')||(board[3]==' ')||(board[7]==' ')||(board[9]==' ')) {
+            if(board[1]==' ') {
+                board[1]=computerChoice;
+            }
+            else if(board[3]==' ') {
+                board[3]=computerChoice;
+            }
+            else if(board[7]==' ') {
+                board[7]=computerChoice;
+            }
+            else if(board[9]==' ') {
+                board[9]=computerChoice;
+            }
+
+        }
+        else if(board[5]==' ') {
+            board[5]=computerChoice;
+        }
     }
 
     public static void main(String[] args) {
