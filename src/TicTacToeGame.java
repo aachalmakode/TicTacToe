@@ -49,6 +49,7 @@ public class TicTacToeGame {
             System.out.println("Enter the position where you want to insert: ");
             int pos=sc.nextInt();
             sc.nextLine();
+            //uc5
             if(board[pos]!=' ') {
                 System.out.println("Space not available! Select another position");
             }
