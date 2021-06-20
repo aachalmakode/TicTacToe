@@ -76,6 +76,39 @@ public class TicTacToeGame {
         }
     }
 
+    public int checkStatus() {
+        if((board[1]==computerChoice && board[2]==computerChoice && board[3]==computerChoice)||
+                (board[4]==computerChoice && board[5]==computerChoice && board[6]==computerChoice)||
+                (board[7]==computerChoice && board[8]==computerChoice && board[9]==computerChoice)||
+                (board[1]==computerChoice && board[4]==computerChoice && board[7]==computerChoice)||
+                (board[2]==computerChoice && board[5]==computerChoice && board[8]==computerChoice)||
+                (board[3]==computerChoice && board[6]==computerChoice && board[9]==computerChoice)||
+                (board[1]==computerChoice && board[5]==computerChoice && board[9]==computerChoice)||
+                (board[3]==computerChoice && board[5]==computerChoice && board[7]==computerChoice)) {
+            System.out.println("Sorry Computer Won");
+            return -1;
+        }
+        else if((board[1]==playerChoice && board[2]==playerChoice && board[3]==playerChoice)||
+                (board[4]==playerChoice && board[5]==playerChoice && board[6]==playerChoice)||
+                (board[7]==playerChoice && board[8]==playerChoice && board[9]==playerChoice)||
+                (board[1]==playerChoice && board[4]==playerChoice && board[7]==playerChoice)||
+                (board[2]==playerChoice && board[5]==playerChoice && board[8]==playerChoice)||
+                (board[3]==playerChoice && board[6]==playerChoice && board[9]==playerChoice)||
+                (board[1]==playerChoice && board[5]==playerChoice && board[9]==playerChoice)||
+                (board[3]==playerChoice && board[5]==playerChoice && board[7]==playerChoice)) {
+            System.out.println("Player Won!!!");
+            return 2;
+        }
+        else {
+            if(board[1]!=' ' && board[2]!=' ' && board[3]!=' ' && board[4]!=' ' && board[5]!=' ' && board[6]!=' ' && board[7]!=' ' && board[8]!=' ' && board[9]!=' ') {
+                System.out.println("Game is drawn!");
+                return 1;
+            }
+            System.out.println("Change turn!");
+            return 0;
+        }
+    }
+
     public static void main(String[] args) {
 
 
