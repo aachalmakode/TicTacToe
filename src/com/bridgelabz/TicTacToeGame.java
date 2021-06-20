@@ -9,6 +9,17 @@ public class TicTacToeGame {
     public char playerChoice;
     public char computerChoice;
 
+    public char[] createBoard() {
+
+        for(int i=1;i<board.length;i++) {
+            board[i]=' ';
+        }
+
+        System.out.println("Created the board");
+        System.out.println(board);
+        return board;
+    }
+
     public static void main(String[] args) {
 	// write your code here
     }
