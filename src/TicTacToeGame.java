@@ -109,6 +109,81 @@ public class TicTacToeGame {
         }
     }
 
+    public void computerPlay() {
+        if(board[1]==computerChoice && board[2]==computerChoice && board[3]==' ') {
+            board[3]=computerChoice;
+        }
+        else if(board[2]==computerChoice && board[3]==computerChoice && board[1]==' ') {
+            board[1]=computerChoice;
+        }
+        else if(board[1]==computerChoice && board[3]==computerChoice && board[2]==' ') {
+            board[2]=computerChoice;
+        }
+        else if(board[4]==computerChoice && board[5]==computerChoice && board[6]==' ') {
+            board[6]=computerChoice;
+        }
+        else if(board[5]==computerChoice && board[6]==computerChoice && board[4]==' ') {
+            board[4]=computerChoice;
+        }
+        else if(board[4]==computerChoice && board[6]==computerChoice && board[5]==' ') {
+            board[5]=computerChoice;
+        }
+        else if(board[7]==computerChoice && board[8]==computerChoice && board[9]==' ') {
+            board[9]=computerChoice;
+        }
+        else if(board[8]==computerChoice && board[9]==computerChoice && board[7]==' ') {
+            board[7]=computerChoice;
+        }
+        else if(board[7]==computerChoice && board[9]==computerChoice && board[8]==' ') {
+            board[8]=computerChoice;
+        }
+        else if(board[1]==computerChoice && board[4]==computerChoice && board[7]==' ') {
+            board[7]=computerChoice;
+        }
+        else if(board[1]==computerChoice && board[7]==computerChoice && board[4]==' ') {
+            board[4]=computerChoice;
+        }
+        else if(board[7]==computerChoice && board[4]==computerChoice && board[1]==' ') {
+            board[1]=computerChoice;
+        }
+        else if(board[2]==computerChoice && board[5]==computerChoice && board[8]==' ') {
+            board[8]=computerChoice;
+        }
+        else if(board[5]==computerChoice && board[8]==computerChoice && board[2]==' ') {
+            board[2]=computerChoice;
+        }
+        else if(board[2]==computerChoice && board[8]==computerChoice && board[5]==' ') {
+            board[5]=computerChoice;
+        }
+        else if(board[3]==computerChoice && board[6]==computerChoice && board[9]==' ') {
+            board[9]=computerChoice;
+        }
+        else if(board[6]==computerChoice && board[9]==computerChoice && board[3]==' ') {
+            board[3]=computerChoice;
+        }
+        else if(board[3]==computerChoice && board[9]==computerChoice && board[6]==' ') {
+            board[6]=computerChoice;
+        }
+        else if(board[1]==computerChoice && board[5]==computerChoice && board[9]==' ') {
+            board[9]=computerChoice;
+        }
+        else if(board[5]==computerChoice && board[9]==computerChoice && board[1]==' ') {
+            board[1]=computerChoice;
+        }
+        else if(board[1]==computerChoice && board[9]==computerChoice && board[5]==' ') {
+            board[5]=computerChoice;
+        }
+        else if(board[3]==computerChoice && board[5]==computerChoice && board[7]==' ') {
+            board[7]=computerChoice;
+        }
+        else if(board[5]==computerChoice && board[7]==computerChoice && board[3]==' ') {
+            board[3]=computerChoice;
+        }
+        else if(board[3]==computerChoice && board[7]==computerChoice && board[5]==' ') {
+            board[5]=computerChoice;
+        }
+    }
+
     public static void main(String[] args) {
 
 
