@@ -34,6 +34,17 @@ public class TicTacToeGame {
 
     }
 
+    public void displayBoard() {
+
+        System.out.println("\n"+board[1]+" | "+board[2]+" | "+board[3]);
+        System.out.println("_____");
+        System.out.println("\n"+board[4]+" | "+board[5]+" | "+board[6]);
+        System.out.println("_____");
+        System.out.println("\n"+board[7]+" | "+board[8]+" | "+board[9]);
+        System.out.println(" ");
+        System.out.println(" ");
+    }
+
     public static void main(String[] args) {
 	// write your code here
     }
