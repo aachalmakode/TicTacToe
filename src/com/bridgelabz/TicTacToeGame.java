@@ -20,6 +20,20 @@ public class TicTacToeGame {
         return board;
     }
 
+    public void makeChoice() {
+
+        System.out.println("Enter your choice(O/X): ");
+        char Choice=sc.next().charAt(0);
+        if(Choice=='X') {
+            computerChoice='O';
+        }
+        else {
+            computerChoice='X';
+        }
+        playerChoice=Choice;
+
+    }
+
     public static void main(String[] args) {
 	// write your code here
     }
