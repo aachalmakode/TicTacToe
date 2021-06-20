@@ -1,6 +1,5 @@
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
-
 public class TicTacToeGame {
 
     Scanner sc=new Scanner(System.in);
@@ -8,6 +7,7 @@ public class TicTacToeGame {
     public char playerChoice;
     public char computerChoice;
 
+    // Create an empty tictactoe board
     public char[] createBoard() {
 
         for(int i=1;i<board.length;i++) {
@@ -18,7 +18,7 @@ public class TicTacToeGame {
         System.out.println(board);
         return board;
     }
-
+    //
     public void makeChoice() {
 
         System.out.println("Enter your choice(O/X): ");
@@ -33,6 +33,7 @@ public class TicTacToeGame {
 
     }
 
+    // Display the current position of board
     public void displayBoard() {
 
         System.out.println("\n"+board[1]+" | "+board[2]+" | "+board[3]);
@@ -50,7 +51,6 @@ public class TicTacToeGame {
             System.out.println("Enter the position where you want to insert: ");
             int pos=sc.nextInt();
             sc.nextLine();
-            //uc5
             if(board[pos]!=' ') {
                 System.out.println("Space not available! Select another position");
             }
@@ -60,7 +60,6 @@ public class TicTacToeGame {
             }
         }
     }
-
     public void toss() {
         int tossRes=ThreadLocalRandom.current().nextInt(0,2);
         System.out.println("Toss Res: "+tossRes);
@@ -183,6 +182,7 @@ public class TicTacToeGame {
             board[5]=computerChoice;
         }
 
+
         else if(board[1]==playerChoice && board[2]==playerChoice && board[3]==' ') {
             board[3]=computerChoice;
         }
@@ -290,33 +290,59 @@ public class TicTacToeGame {
             }
         }
     }
-}
+
+
+
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner sc=new Scanner(System.in);
         System.out.println("*** Welcome to TicTacToeGame *****");
-        while (true) {
+        while(true) {
             System.out.println(" ");
             System.out.println("1. Play game against computer");
             System.out.println("2. Exit");
-            int ch = sc.nextInt();
-            if (ch == 1) {
-                TicTacToeGame obj = new TicTacToeGame();
+            int ch=sc.nextInt();
+            if(ch==1) {
+                TicTacToeGame obj=new TicTacToeGame();
                 obj.createBoard();
                 obj.toss();
-                System.out.println("Player choice: " + obj.playerChoice);
-                System.out.println("Computer choice: " + obj.computerChoice);
-                int prev = 0;
-                int res = 0;
-                if (obj.playerChoice == 'X') {
+                System.out.println("Player choice: "+obj.playerChoice);
+                System.out.println("Computer choice: "+obj.computerChoice);
+                int prev=0;
+                int res=0;
+                if(obj.playerChoice=='X') {
                     obj.fillBoard();
                     obj.displayBoard();
-                    prev = 1;
-                } else {
+                    prev=1;
+                }
+                else {
                     obj.computerPlay();
                     obj.displayBoard();
-                    prev = 0;
+                    prev=0;
+                }
+                while(true) {
+                    if(prev==1) {
+                        obj.computerPlay();
+                        obj.displayBoard();
+                        prev=0;
+
+                    }
+                    else {
+                        obj.fillBoard();
+                        obj.displayBoard();
+                        prev=1;
+                    }
+                    res=obj.checkStatus();
+                    if(res==-1 || res==2 || res==1) {
+                        break;
+                    }
                 }
             }
+            else {
+                System.out.println("Thank you playing! Hope to play with you again");
+                break;
+            }
         }
+        sc.close();
     }
+}
