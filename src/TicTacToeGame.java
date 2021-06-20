@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class TicTacToeGame {
 
@@ -60,7 +61,23 @@ public class TicTacToeGame {
         }
     }
 
+    public void toss() {
+        int tossRes=ThreadLocalRandom.current().nextInt(0,2);
+        System.out.println("Toss Res: "+tossRes);
+        if(tossRes==0) {
+            playerChoice='O';
+            computerChoice='X';
+            System.out.println("Computer Plays First");
+        }
+        else {
+            playerChoice='X';
+            computerChoice='O';
+            System.out.println("Player Plays First");
+        }
+    }
+
     public static void main(String[] args) {
-	// write your code here
+
+
     }
 }
