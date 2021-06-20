@@ -274,10 +274,27 @@ public class TicTacToeGame {
         else if(board[5]==' ') {
             board[5]=computerChoice;
         }
+
+        else if((board[2]==' ')||(board[4]==' ')||(board[6]==' ')||(board[8]==' ')) {
+            if(board[2]==' ') {
+                board[2]=computerChoice;
+            }
+            else if(board[4]==' ') {
+                board[4]=computerChoice;
+            }
+            else if(board[6]==' ') {
+                board[6]=computerChoice;
+            }
+            else if(board[8]==' ') {
+                board[8]=computerChoice;
+            }
+        }
     }
+}
 
     public static void main(String[] args) {
 
 
     }
-}
+
+
